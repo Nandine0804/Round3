@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./assets/media.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>MEET | ROUND 3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 
@@ -16,7 +19,8 @@
     <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen'></i>
-            <span class="logo navLogo"><a href="#">MEET</a></span>
+
+            <span class="logo navLogo"><img src="./assets/media1.png" class="logo"alt="" /><a href="#">MEET</a></span>
 
             <div class="menu">
                 <div class="logo-toggle">
@@ -27,13 +31,16 @@
                 <ul class="nav-links">
 
                     <li>
-                        <a href="#"><img src="./assets/avatar.png" alt="" /> </a>
+
+                        <a><img src="./assets/avatar.png" alt="" />
+                        </a>
                     </li>
                     <li><a href="#">USERNAME</a></li>
                 </ul>
+
             </div>
 
-            <div class="darkLight-searchBox">
+            <div class="darkLight-searchBox" onclick="myFunction()">
                 <div class="dark-light">
                     <i class='bx bx-moon moon'></i>
                     <i class='bx bx-sun sun'></i>
@@ -49,18 +56,79 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-box-details">
-                <div id="clock">9:59:45</div>
-                <div class="meet-link">
-                    <a href=""></a>
+                <a href="https://project1-lang.github.io/Round3/"><span>SHARE
+                        : </span>https://project1-lang.github.io/Round3/</a>
+                <div id="clock">
+                    <h4>9:59:45
+                    </h4>
                 </div>
+
             </div>
             <div class="hero-box">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
+                <div class="hero-box"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
+                    <div class="bottom-left"><span>PERSON 1 -SPEAKING</span></div>
+                </div>
+                <div class="hero-box"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
+                    <div class="bottom-right"><span>PERSON 2</span></div>
+                </div>
             </div>
         </div>
     </section>
+    <section class="require">
+        <div class="back">
+            <img src="./assets/mute.gif" alt="" />
+            <img src="./assets/video.gif" alt="" />
+            <img src="./assets/presentation.gif" alt="" />
+        </div>
+    </section>
+    <section class="hero-slider">
+        <div class="slider-container" item-display-d="3" item-display-t="3" item-display-m="1">
+            <div class="slider-width">
+                <div class="item">
+                    <h5>Person 3</h5><img src="assets/hacker.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 4</h5><img src="assets/p1.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 5</h5><img src="assets/p2.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 6</h5><img src="assets/p3.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 7</h5><img src="assets/p4.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 8</h5><img src="assets/p5.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 9</h5><img src="assets/p6.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 10</h5><img src="assets/p7.gif" alt="">
+                </div>
+                <div class="item">
+                    <h5>Person 11</h5><img src="assets/p8.gif" alt="">
+                </div>
+
+            </div>
+
+        </div>
+        <button type="button" class="prev" onclick="prev()">Prev</button>
+        <button type="button" class="next" onclick="next()">Next</button>
+
+    </section>
+    <footer>
+        <img src="./assets/media1.png" class="logo" alt="" />
+
+        <h4>MEET. EXPLORE . GROW</h4>
+    </footer>
     <script>
+        function myFunction() {
+            const element = document.body;
+            element.classList.toggle("dark-mode");
+        }
         setInterval(showTime, 1000);
 
         function showTime() {
@@ -72,11 +140,11 @@
 
             if (hour > 12) {
                 hour -= 12;
-                am_pm = "PM";
+                am_pm = " PM";
             }
             if (hour == 0) {
                 hr = 12;
-                am_pm = "AM";
+                am_pm = " AM";
             }
 
             hour = hour < 10 ? "0" + hour : hour;
@@ -90,35 +158,18 @@
                 .innerHTML = currentTime;
         }
         showTime();
+
+
         const body = document.querySelector("body"),
             nav = document.querySelector("nav"),
             modeToggle = document.querySelector(".dark-light"),
-            searchToggle = document.querySelector(".searchToggle"),
             sidebarOpen = document.querySelector(".sidebarOpen"),
             siderbarClose = document.querySelector(".siderbarClose");
 
-        let getMode = localStorage.getItem("mode");
-        if (getMode && getMode === "dark-mode") {
-            body.classList.add("dark");
-        }
 
 
-        modeToggle.addEventListener("click", () => {
-            modeToggle.classList.toggle("active");
-            body.classList.toggle("dark");
 
 
-            if (!body.classList.contains("dark")) {
-                localStorage.setItem("mode", "light-mode");
-            } else {
-                localStorage.setItem("mode", "dark-mode");
-            }
-        });
-
-
-        searchToggle.addEventListener("click", () => {
-            searchToggle.classList.toggle("active");
-        });
 
 
 
@@ -133,6 +184,58 @@
                 nav.classList.remove("active");
             }
         });
+        let count = 0;
+        let inc = 0;
+        margin = 0;
+        let slider = document.getElementsByClassName("slider-width")[0];
+        let itemDisplay = 0;
+        if (screen.width > 990) {
+            itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-d");
+            margin = itemDisplay * 5;
+        }
+        if (screen.width > 700 && screen.width < 990) {
+            itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-t");
+            margin = itemDisplay * 6.8;
+        }
+        if (screen.width > 280 && screen.width < 700) {
+            itemDisplay = document.getElementsByClassName("slider-container")[0].getAttribute("item-display-m");
+            margin = itemDisplay * 20;
+        }
+
+
+        let items = document.getElementsByClassName("item");
+        let itemleft = items.length % itemDisplay;
+        let itemslide = Math.floor(items.length / itemDisplay) - 1;
+        for (let i = 0; i < items.length; i++) {
+            items[i].style.width = (screen.width / itemDisplay) - margin + "px";
+        }
+
+        function next() {
+            if (inc !== itemslide + itemleft) {
+                if (inc == itemslide) {
+                    inc = inc + itemleft;
+                    count = count - (screen.width / itemDisplay) * itemleft;
+                } else {
+                    inc++;
+                    count = count - screen.width;
+                }
+            }
+            slider.style.left = count + "px";
+        }
+
+        function prev() {
+            if (inc !== 0) {
+                if (inc == itemleft) {
+                    inc = inc - itemleft;
+                    count = count + (screen.width / itemDisplay) * itemleft;
+                } else {
+                    inc--;
+                    count = count + screen.width;
+                }
+            }
+            console.log(inc)
+            slider.style.left = count + "px";
+        }
     </script>
 
 </body>
